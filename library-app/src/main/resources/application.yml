@@ -1,0 +1,12 @@
+spring:
+  data:
+    cassandra:
+      contact-points: localhost
+      port: 9042
+  main:
+    allow-circular-references: true
+
+logging:
+  level:
+#    org.springframework.data.cassandra.core.cql.CqlTemplate: DEBUG
+    org.springframework.data.cassandra: DEBUG

@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+
+  cassandra:
+    container_name: cassandra
+    hostname: cassandra
+    build: cassandra
+    environment:
+      CASSANDRA_CLUSTER_NAME: sandbox-cluster
+      CASSANDRA_KEYSPACE: sandbox
+    ports:
+      - "9042:9042"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 2048M
